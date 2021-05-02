@@ -6,6 +6,7 @@ import SectionHeader from 'components/section-header';
 import PatternBG from 'assets/patternBG.png';
 import ArrowOdd from 'assets/arrowOdd.svg';
 import ArrowEven from 'assets/arrowEven.svg';
+import { AnimateSharedLayout } from 'framer-motion';
 
 const data = [
   {
@@ -36,7 +37,31 @@ const data = [
 
 export default function WorkFlow() {
   return (
-    <h1>Workflow</h1>
+    <section sx = {styles.workflow}>
+      <Container>
+        <SectionHeader slogan = 'Wahts the function'
+                        title = 'jkhflqjhflejhflejhfbewjkhflew'
+                        isWhite = {true} />
+        <Grid sx = {styles.grid}>
+          {data.map(item => (
+            <Box key = {item.id} sx = {styles.card}>
+              <Box sx = {styles.iconBox}>
+                {`${item.id}`}
+              </Box>
+              <Box sx = {styles.wrapper}>
+                <Heading sx = {styles.wrapper.title}>
+                  {item.title}
+                </Heading>
+                <Text sx = {styles.wrapper.subTitle}>
+                  {item.text}
+                </Text>
+              </Box>
+            </Box>
+          ))}
+        </Grid>
+      </Container>
+
+    </section>
   );
 }
 

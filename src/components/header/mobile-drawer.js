@@ -37,13 +37,13 @@ export default function MobileDrawer() {
             }
             open = {isDrawerOpen}
             toggleHandler = {() => setIsDrawerOpen((prevState) => !prevState )}
-            closeButton = {<IoMdClose size = '24px' color = '#000000'/>}
+            closeButton = {<IoMdClose size = '26px' color = '#000000'/>}
             drawerStyle = {styles.drawer}
             closeBtnStyle = {styles.close}
             >
         <Scrollbars autoHide> 
             <Box sx = {styles.content}>
-              <Box sx = {styles.content}>
+              <Box sx = {styles.menu}>
                 {menuItems.map((item,index) => {
                   return <Link activeClass = {styles.active}
                               to = {item.path}
