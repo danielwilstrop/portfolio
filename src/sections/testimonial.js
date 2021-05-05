@@ -101,7 +101,27 @@ const carouselParams = {
 
 export default function TestimonialCard() {
   return (
-   <h1>Testimonial Card</h1>
+    <section id = 'testimonial' sx = {{ variant: 'section.testimonial' }}>
+      <Container css ={{ textAlign: 'center' }}>
+        <SectionHeader slogan = 'Testimonials'
+                       title = 'See some of our reviews' />
+      </Container>
+      <Box sx = {styles.carouselWrapper}>
+        <Carousel {...carouselParams}>
+          {data.map(item => (
+            <Box sx = {styles.reviewCard} key = {item.id}>
+              <Rating rating = {item.review} />
+              <Heading as = 'h3' sx = {styles.title}>
+                {item.title}
+              </Heading>
+              <Text sx = {styles.description}>
+                {item.description}
+              </Text>
+            </Box>
+          ))}
+        </Carousel>
+      </Box>
+   </section>
   );
 }
 
