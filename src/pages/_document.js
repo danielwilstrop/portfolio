@@ -9,7 +9,9 @@ class CustomDocument extends Document {
   render() {
     return (
       <Html lang="en-US">
-        <Head />
+        <Head>
+          <title>Dan Wilstrop</title>
+        </Head>
         <body>
           <Main />
           <NextScript />
