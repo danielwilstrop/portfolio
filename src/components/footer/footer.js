@@ -1,12 +1,22 @@
 /** @jsx jsx */
 import { jsx, Box, Container, Image, Text } from 'theme-ui';
 import { Link } from 'components/link';
-import data from './footer.data';
 import FooterLogo from 'assets/logo.svg';
 
 export default function Footer() {
   return (
-    <h1>Footer</h1>
+    <footer sx = {styles.footer}>
+      <Container>
+        <Box sx = {styles.footer.footerBottomArea}>
+          <Link to = '/'>
+            <Image src = {FooterLogo} alt = 'logo' />
+          </Link>
+          <Text sx = {styles.footer.copyight}>
+            Copyright Daniel Wilstrop { new Date().getFullYear()} &copy;
+          </Text>
+        </Box>
+      </Container>
+    </footer>
   );
 }
 
@@ -21,17 +31,6 @@ const styles = {
       textAlign: 'center',
       flexDirection: 'column',
     },
-    menus: {
-      mt: [3, 4],
-      mb: 2,
-      nav: {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        flexWrap: 'wrap',
-      },
-    },
-
     link: {
       fontSize: [1, '15px'],
       color: 'text',

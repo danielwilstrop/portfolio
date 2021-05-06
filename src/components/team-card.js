@@ -17,6 +17,7 @@ export default function TeamCard({ src, altText, title, designation, social }) {
       <Box sx = {styles.socialShare} className = 'social__share'>
         {social.map(item => (
           <Link key = {item.id}
+                target = 'blank'
                 href = {item.path}
                 className = {item.name}>
                 {item.icon}

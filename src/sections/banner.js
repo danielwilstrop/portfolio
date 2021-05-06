@@ -1,11 +1,12 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
+import { Link } from 'react-scroll'
 import { Container, Box, Heading, Text, Image, Button } from 'theme-ui';
 import BannerImg from 'assets/banner-thumb.png';
 import ShapeLeft from 'assets/shape-left.png';
 import ShapeRight from 'assets/shape-right.png';
 
-export default function Banner() {
+export default function Banner() { 
   return (
     <section sx = {styles.banner} id = 'home'>
       <Container sx = {styles.banner.Container}>
@@ -16,9 +17,15 @@ export default function Banner() {
           <Text as = 'p' variant = 'heroSecondary'>
             Bsc. Computing and IT(software) student with the Open University, foccusing on the full development lifecycle and the theory of computer science as well as creating high quality code and projects.
           </Text>
-          <Button variant = 'primary'>
-            Explore
-          </Button>
+          <Link to = 'projects'
+                spy = {true}
+                smooth = {true}
+                offset = {-70}
+                duration = {500}>
+            <Button variant = 'primary'>
+              Projects 
+            </Button>
+          </Link>
         </Box>
         <Box sx = {styles.banner.imageBox}>
           <Image src = {BannerImg} alt = 'banner' />

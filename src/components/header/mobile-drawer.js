@@ -4,25 +4,25 @@ import { Scrollbars } from 'react-custom-scrollbars';
 import Drawer from 'components/drawer';
 import { IoMdClose, IoMdMenu } from 'react-icons/io';
 import { Link } from 'react-scroll';
-import { FaFacebookF, FaTwitter, FaGithubAlt, FaDribbble } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaGithub, FaEnvelope } from 'react-icons/fa';
 import menuItems from './header.data';
 
 const social = [
   {
-    path: '/',
+    path: 'https://www.facebook.com/dan.wilstrop/',
     icon: <FaFacebookF />,
   },
   {
-    path: '/',
-    icon: <FaTwitter />,
+    path: 'https://github.com/danielwilstrop',
+    icon: <FaGithub />,
   },
   {
-    path: '/',
-    icon: <FaGithubAlt />,
+    path: 'mailto:daniel.wilstrop@outlook.com',
+    icon: <FaEnvelope />,
   },
   {
-    path: '/',
-    icon: <FaDribbble />,
+    path: 'https://www.instagram.com/danwilstrop/',
+    icon: <FaInstagram />,
   },
 ];
 

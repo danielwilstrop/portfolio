@@ -2,36 +2,34 @@
 import { jsx } from 'theme-ui';
 import { Container, Grid, Box, Heading, Text } from 'theme-ui';
 import SectionHeader from 'components/section-header';
-
 import PatternBG from 'assets/patternBG.png';
 import ArrowOdd from 'assets/arrowOdd.svg';
 import ArrowEven from 'assets/arrowEven.svg';
-import { AnimateSharedLayout } from 'framer-motion';
 
 const data = [
   {
     id: 1,
-    title: 'Set disbursement Instructions',
+    title: 'Draw up an Idea',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'All the best projects need a plan, well thought out, wireframed and thorough',
   },
   {
     id: 2,
-    title: 'Assembly retrieves funds from your account',
+    title: 'Research and WireFrame the Tech',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Is there a package made that can help? Is React the best choice? Key to my development is ensuring I am using the best tech for the task in hand',
   },
   {
     id: 3,
-    title: 'Assembly initiates disbursement',
+    title: 'Implement the Development',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Read any necessary documentaion and implement it with clean, thorough and well thought out code',
   },
   {
     id: 4,
-    title: 'Customer receives funds payment',
+    title: 'Test and Deploy',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Test the projet from a users point of view, ensure the code is readable, maintainable and then deploy',
   },
 ];
 
@@ -39,8 +37,8 @@ export default function WorkFlow() {
   return (
     <section sx = {styles.workflow}>
       <Container>
-        <SectionHeader slogan = 'Wahts the function'
-                        title = 'jkhflqjhflejhflejhfbewjkhflew'
+        <SectionHeader slogan = 'Plan a Project'
+                        title = 'Fully planned, researched, devlopeed and tested Projects'
                         isWhite = {true} />
         <Grid sx = {styles.grid}>
           {data.map(item => (
@@ -74,6 +72,7 @@ const styles = {
     backgroundSize: 'cover',
     position: 'relative',
     py: [8, null, 9, null, null, 10],
+    mb: 8
   },
   grid: {
     mb: -1,

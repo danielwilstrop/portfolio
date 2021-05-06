@@ -3,58 +3,53 @@ import { jsx } from 'theme-ui';
 import { Container, Grid } from 'theme-ui';
 import SectionHeader from '../components/section-header';
 import FeatureCardColumn from 'components/feature-card-column.js';
-import Performance from 'assets/key-feature/performance.svg';
-import Partnership from 'assets/key-feature/partnership.svg';
-import Subscription from 'assets/key-feature/subscription.svg';
-import Support from 'assets/key-feature/support.svg';
+import React from 'assets/key-feature/reactjs-icon.svg';
+import NodeJS from 'assets/key-feature/nodejs.svg';
+import Javascript from 'assets/key-feature/javascript.svg';
+import MongoDB from 'assets/key-feature/mongodb.svg';
 
 const data = [
   {
     id: 1,
-    imgSrc: Performance,
-    altText: 'Fast Performance',
-    title: 'Fast Performance',
+    imgSrc: React,
+    altText: 'React',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Lightning fast web applications and pages, with the latest frameworks and packages from React, NextJs and NPM',
   },
   {
     id: 2,
-    imgSrc: Partnership,
-    altText: 'Partnership deal',
-    title: 'Partnership deal',
+    imgSrc: MongoDB,
+    altText: 'mongoDB',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Easy to use noSQL databases, with simpke queries and access utilising MongoDb and mongoose',
   },
   {
     id: 3,
-    imgSrc: Subscription,
-    altText: 'Pro Subscription',
-    title: 'Pro Subscription',
+    imgSrc: NodeJS,
+    altText: 'node and express',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Simple and effective server side coding using NodeJS, Express Router and NPM packages',
   },
   {
     id: 4,
-    imgSrc: Support,
-    altText: 'Customer Support',
-    title: 'Customer Support',
+    imgSrc: Javascript,
+    altText: 'Javascript',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Fully versed in javascript, from data structures and alogorithms, through to DOM manipulation',
   },
 ];
 
 export default function KeyFeature() {
   return (
-    <section sx ={{variant: 'section.keyFeature'}} id = 'feature'>
+    <section sx ={{variant: 'section.keyFeature'}} id = 'tech-stack'>
       <Container>
-        <SectionHeader slogan = 'Whats the function?' title = 'Meet the Teacher'/>
+        <SectionHeader slogan = 'Key Tech Used' title = "My current tech stack for web apps, pages and development is the 'MERN' stack"/>
         <Grid sx = {styles.grid}>
           {data.map(item => (
             <FeatureCardColumn 
               key = {item.id}
               src = {item.imgSrc}
               alt = {item.altText}
-              title = {item.title}
               text = {item.text}/>
           ))}
         </Grid>

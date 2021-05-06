@@ -25,9 +25,11 @@ export default function Header({ className }) {
                        </Link>
               })}
           </Flex>
-          <Button className = 'donate__btn' variant = 'secondary' aria-label = 'get-started'>
-            Get started
-          </Button>
+          <a href = 'https://github.com/danielwilstrop' target = 'blank'>
+            <Button className = 'gh__btn' variant = 'secondary' aria-label = 'GitHub'>
+              Github
+            </Button>
+          </a>
           <MobileDrawer />
         </Container>
       </header>
@@ -59,7 +61,7 @@ const styles = {
     backgroundColor: 'transparent',
     transition: 'all 0.4s ease',
     animation: `${positionAnim} 0.4s ease`,
-    '.donate__btn': {
+    '.gh__btn': {
       flexShrink: 0,
       mr: [15, 20, null, null, 0],
       ml: ['auto', null, null, null, 0],
