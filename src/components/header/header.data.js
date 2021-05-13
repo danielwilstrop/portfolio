@@ -1,18 +1,18 @@
 export default [
   {
     path: 'home',
-    label: 'Home',
+    label: 'Home'
   },
   {
     path: 'tech-stack',
-    label: 'Tech',
+    label: 'Tech'
   },
   {
     path: 'projects',
-    label: 'Projects',
+    label: 'Projects'
   },
   {
     path: 'profile',
-    label: 'Contact',
-  },
-];
+    label: 'Contact'
+  }
+]

@@ -1,39 +1,42 @@
 /** @jsx jsx */
-import { jsx, Container, Flex, Button } from 'theme-ui';
-import { keyframes } from '@emotion/core';
-import { Link } from 'react-scroll';
-import Logo from 'components/logo';
-import LogoDark from 'assets/logo.svg';
-import MobileDrawer from './mobile-drawer';
-import menuItems from './header.data';
+import { jsx, Container, Flex, Button } from 'theme-ui'
+import { keyframes } from '@emotion/core'
+import { Link } from 'react-scroll'
+import Logo from 'components/logo'
+import LogoDark from 'assets/logo.svg'
+import MobileDrawer from './mobile-drawer'
+import menuItems from './header.data'
 
 export default function Header({ className }) {
   return (
-      <header sx = {styles.header} className = {className} id = 'header'>
-        <Container sx = {styles.container}>
-          <Logo src = {LogoDark} />
-          <Flex as ='nav' sx = {styles.nav}>
-              {menuItems.map((item,index) => {
-                return <Link activeClass = {styles.active}
-                            to = {item.path}
-                            spy = {true}
-                            smooth = {true}
-                            offset = {-70}
-                            duration = {500}
-                            key = {index}> 
-                            {item.label}
-                       </Link>
-              })}
-          </Flex>
-          <a href = 'https://github.com/danielwilstrop' target = 'blank'>
-            <Button className = 'gh__btn' variant = 'secondary' aria-label = 'GitHub'>
-              Github
-            </Button>
-          </a>
-          <MobileDrawer />
-        </Container>
-      </header>
-  );
+    <header sx={styles.header} className={className} id='header'>
+      <Container sx={styles.container}>
+        <Logo src={LogoDark} />
+        <Flex as='nav' sx={styles.nav}>
+          {menuItems.map((item, index) => {
+            return (
+              <Link
+                activeClass={styles.active}
+                to={item.path}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                key={index}>
+                {item.label}
+              </Link>
+            )
+          })}
+        </Flex>
+        <a href='https://next-jsb-log-topaz.vercel.app/' target='blank'>
+          <Button className='gh__btn' variant='secondary' aria-label='GitHub'>
+            Blog
+          </Button>
+        </a>
+        <MobileDrawer />
+      </Container>
+    </header>
+  )
 }
 
 const positionAnim = keyframes`
@@ -47,7 +50,7 @@ const positionAnim = keyframes`
     opacity: 1;
     transition: all 0.4s ease;
   }
-`;
+`
 
 const styles = {
   header: {
@@ -64,7 +67,7 @@ const styles = {
     '.gh__btn': {
       flexShrink: 0,
       mr: [15, 20, null, null, 0],
-      ml: ['auto', null, null, null, 0],
+      ml: ['auto', null, null, null, 0]
     },
     '&.sticky': {
       position: 'fixed',
@@ -73,20 +76,20 @@ const styles = {
       boxShadow: '0 1px 2px rgba(0, 0, 0, 0.06)',
       py: 3,
       'nev > a': {
-        color: 'text',
-      },
-    },
+        color: 'text'
+      }
+    }
   },
   container: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'space-between'
   },
   nav: {
     mx: 'auto',
     display: 'none',
     '@media screen and (min-width: 1024px)': {
-      display: 'block',
+      display: 'block'
     },
     a: {
       fontSize: 2,
@@ -96,11 +99,11 @@ const styles = {
       lineHeight: '1.2',
       transition: 'all 0.15s',
       '&:hover': {
-        color: 'primary',
+        color: 'primary'
       },
       '&.active': {
-        color: 'primary',
-      },
-    },
-  },
-};
+        color: 'primary'
+      }
+    }
+  }
+}
