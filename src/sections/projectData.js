@@ -5,6 +5,7 @@ import Jamming from '../assets/projects/jamming.png'
 import Quiz from '../assets/projects/quiz.png'
 import Ravenous from '../assets/projects/ravenous.png'
 import Search from '../assets/projects/searchappscreenshot.png'
+import Pokedex from '../assets/projects/pokedexscreenshot.png'
 
 
 export const data = [
@@ -64,6 +65,14 @@ export const data = [
     img:Ravenous,
     url: 'https://danielwilstrop.github.io/ravenous/'
     },
+    {
+      id: 7,
+      title: 'Pokedex',
+      description:
+          'Demonstrating filtering of API data with react usecontext() and vanilla JS data manipulation.  All encased in a pokedex to relive soem childhood memories!',
+      img:Pokedex,
+      url: 'https://danielwilstrop.github.io/pokedex/'
+      },
   ];
   
  
